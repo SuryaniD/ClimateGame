@@ -142,5 +142,5 @@ MonoBehaviour:
   - {fileID: 3813451235945717298}
   chunksHard:
   - {fileID: 3813451235945717298}
-  distanceSpawn: 0
+  distanceSpawn: 5
   LowSpawn: 0

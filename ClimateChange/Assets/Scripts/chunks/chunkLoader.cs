@@ -32,7 +32,7 @@ public class chunkLoader : MonoBehaviour {
         //checks if a new chunk should be created
         if(_camera.position.x >= transform.position.x - 20 && loaded == false)
         {
-            Vector3 spawnLocation = new Vector3(transform.position.x + distanceSpawn, transform.position.y - LowSpawn, 0);
+            Vector3 spawnLocation = new Vector3(transform.position.x + distanceSpawn, transform.position.y - LowSpawn, 13);
             int ods = Random.Range(1, 100);
             if(ods >= 1 && ods <= 40)
             {

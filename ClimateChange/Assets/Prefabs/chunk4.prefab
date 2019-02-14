@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6033370537490145278}
   - component: {fileID: 6195853883858931715}
   - component: {fileID: 4538515180308438645}
-  - component: {fileID: 7484638091054258937}
-  m_Layer: 0
+  - component: {fileID: 3152905772744265343}
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,20 +78,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7484638091054258937
-MeshCollider:
+--- !u!61 &3152905772744265343
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666586894331131869}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2395615144489100028
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,9 +114,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2395615144489100019}
   - component: {fileID: 2395615144489100018}
+  - component: {fileID: 5219196833976297116}
+  - component: {fileID: 7245064128059314346}
   m_Layer: 0
   m_Name: trash3
-  m_TagString: Untagged
+  m_TagString: kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +185,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5219196833976297116
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395615144489100028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06238681, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.57, y: 1.69}
+    newSize: {x: 4.57, y: 1.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.862955, y: 1.69}
+  m_EdgeRadius: 0
+--- !u!114 &7245064128059314346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395615144489100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0a3007cc8aa8542b01a8459e1aeecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2395615146281265245
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,9 +233,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2395615146281265244}
   - component: {fileID: 2395615146281265235}
+  - component: {fileID: 6093867375854396453}
+  - component: {fileID: 7041384941042181207}
   m_Layer: 0
   m_Name: trash3 (1)
-  m_TagString: Untagged
+  m_TagString: kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,6 +304,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6093867375854396453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395615146281265245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000011920929, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.57, y: 1.69}
+    newSize: {x: 4.57, y: 1.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.987728, y: 1.69}
+  m_EdgeRadius: 0
+--- !u!114 &7041384941042181207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395615146281265245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0a3007cc8aa8542b01a8459e1aeecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2842319902146823699
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,8 +353,8 @@ GameObject:
   - component: {fileID: 2842319902146823698}
   - component: {fileID: 2842319902146823695}
   - component: {fileID: 2842319902146823692}
-  - component: {fileID: 2842319902146823693}
-  m_Layer: 0
+  - component: {fileID: 5431092458314918968}
+  m_Layer: 8
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,20 +420,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2842319902146823693
-MeshCollider:
+--- !u!61 &5431092458314918968
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2842319902146823699}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3798481056731740699
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,8 +455,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7485151023877588578}
+  - component: {fileID: 3969566172058504124}
   m_Layer: 0
-  m_Name: chunk4 1
+  m_Name: chunk4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3798481056731740699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5327296, y: -0.21091817, z: -0.02761654}
+  m_LocalPosition: {x: 0.5327296, y: -0.21091817, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6033370537490145278}
@@ -376,3 +481,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3969566172058504124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798481056731740699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c5d8733186b84d81855b9a494a9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunksEasy:
+  - {fileID: 5180399993135775164, guid: 8ffc9233d6019f048abaa25ef10e83ec, type: 3}
+  - {fileID: 7143146380548104369, guid: 3339eae0900e39544bd0da944cc656be, type: 3}
+  - {fileID: 1789629359265218796, guid: a0eabf4ef0c5ff0469a49df4862bb020, type: 3}
+  chunksMedium:
+  - {fileID: 1764124261852146878, guid: b0ff9176e4775f446bd3704d52b226c6, type: 3}
+  chunksHard:
+  - {fileID: 1708524334640282347, guid: c4bb3601873468c46b63ac8b408d9231, type: 3}
+  - {fileID: 3967788647947713247, guid: 94378ff49ff8dce46aba4073dfafc891, type: 3}
+  - {fileID: 3798481056731740699}
+  distanceSpawn: 19
+  LowSpawn: 0

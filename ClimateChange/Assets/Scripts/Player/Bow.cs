@@ -17,7 +17,7 @@ public class Bow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //Schiet de pijl
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             //anim.SetTrigger("shoot");
             ShootAnArrow();
@@ -34,7 +34,7 @@ public class Bow : MonoBehaviour
             bulletSpawn.rotation);
 
         //Snelheid en richting van de pijl
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.right * 40;
+        bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * 40;
         //Vernietiged de pijl na een bepaalde tijd
         Destroy(bullet, Range);
     }

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2708841090806882703}
   - component: {fileID: 5691332763186291453}
   - component: {fileID: 3353330646763606518}
-  - component: {fileID: 8928927081721565264}
-  m_Layer: 0
+  - component: {fileID: 2896915054270625666}
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,20 +78,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8928927081721565264
-MeshCollider:
+--- !u!61 &2896915054270625666
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772671723009279719}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1764124261852146878
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,8 +113,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1764124261852146879}
+  - component: {fileID: 1701079543434237055}
   m_Layer: 0
-  m_Name: Chunk2 1
+  m_Name: Chunk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764124261852146878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27477103, y: 0.45945537, z: -0.02761654}
+  m_LocalPosition: {x: 0.27477103, y: 0.45945537, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4472397019808751370}
@@ -126,6 +139,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701079543434237055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764124261852146878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c5d8733186b84d81855b9a494a9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunksEasy:
+  - {fileID: 5180399993135775164, guid: 8ffc9233d6019f048abaa25ef10e83ec, type: 3}
+  - {fileID: 7143146380548104369, guid: 3339eae0900e39544bd0da944cc656be, type: 3}
+  - {fileID: 1789629359265218796, guid: a0eabf4ef0c5ff0469a49df4862bb020, type: 3}
+  chunksMedium:
+  - {fileID: 1764124261852146878}
+  chunksHard:
+  - {fileID: 1708524334640282347, guid: c4bb3601873468c46b63ac8b408d9231, type: 3}
+  - {fileID: 3967788647947713247, guid: 94378ff49ff8dce46aba4073dfafc891, type: 3}
+  - {fileID: 3798481056731740699, guid: 9b7b1cdd6a6f60440b1cc8c8bf66ff7a, type: 3}
+  distanceSpawn: 19
+  LowSpawn: 0
 --- !u!1 &4472397019808751371
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,9 +173,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4472397019808751370}
   - component: {fileID: 4472397019808751369}
+  - component: {fileID: 5840255330204626345}
+  - component: {fileID: 4103979286438860497}
   m_Layer: 0
   m_Name: trash4
-  m_TagString: Untagged
+  m_TagString: kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +244,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5840255330204626345
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472397019808751371}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025108099, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.33, y: 2.03}
+    newSize: {x: 2.33, y: 2.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7776341, y: 2.03}
+  m_EdgeRadius: 0
+--- !u!114 &4103979286438860497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472397019808751371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0a3007cc8aa8542b01a8459e1aeecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4633788228659793420
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,8 +293,8 @@ GameObject:
   - component: {fileID: 6306254609186194194}
   - component: {fileID: 3549515856934354386}
   - component: {fileID: 7127206896222336688}
-  - component: {fileID: 1046482176888082516}
-  m_Layer: 0
+  - component: {fileID: 9052694875666537263}
+  m_Layer: 8
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,20 +360,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1046482176888082516
-MeshCollider:
+--- !u!61 &9052694875666537263
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4633788228659793420}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000000037252903, y: 0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4772549433496366056
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,8 +397,8 @@ GameObject:
   - component: {fileID: 7980420859227571012}
   - component: {fileID: 6946507305950522077}
   - component: {fileID: 7632106203750260728}
-  - component: {fileID: 4295259928325536332}
-  m_Layer: 0
+  - component: {fileID: 277518388159193694}
+  m_Layer: 8
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,17 +464,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4295259928325536332
-MeshCollider:
+--- !u!61 &277518388159193694
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772549433496366056}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

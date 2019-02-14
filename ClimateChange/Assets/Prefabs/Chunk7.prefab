@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 797439407659072741}
   - component: {fileID: 797439407659072760}
   - component: {fileID: 797439407659072763}
-  - component: {fileID: 797439407659072762}
-  m_Layer: 0
+  - component: {fileID: 1480871367058306960}
+  m_Layer: 8
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,20 +78,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &797439407659072762
-MeshCollider:
+--- !u!61 &1480871367058306960
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797439407659072740}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1789629359265218796
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5440481650523159701}
+  - component: {fileID: 1429429428519167768}
   m_Layer: 0
   m_Name: Chunk7
   m_TagString: Untagged
@@ -116,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789629359265218796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4960302, y: -0.25808385, z: -0.02761654}
+  m_LocalPosition: {x: 0.4960302, y: -0.25808385, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9212735942857516297}
@@ -124,6 +137,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1429429428519167768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789629359265218796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c5d8733186b84d81855b9a494a9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunksEasy:
+  - {fileID: 5180399993135775164, guid: 8ffc9233d6019f048abaa25ef10e83ec, type: 3}
+  - {fileID: 7143146380548104369, guid: 3339eae0900e39544bd0da944cc656be, type: 3}
+  - {fileID: 1789629359265218796}
+  chunksMedium:
+  - {fileID: 1764124261852146878, guid: b0ff9176e4775f446bd3704d52b226c6, type: 3}
+  chunksHard:
+  - {fileID: 1708524334640282347, guid: c4bb3601873468c46b63ac8b408d9231, type: 3}
+  - {fileID: 3967788647947713247, guid: 94378ff49ff8dce46aba4073dfafc891, type: 3}
+  - {fileID: 3798481056731740699, guid: 9b7b1cdd6a6f60440b1cc8c8bf66ff7a, type: 3}
+  distanceSpawn: 19
+  LowSpawn: 0
 --- !u!1 &2675368188897594666
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,8 +172,8 @@ GameObject:
   - component: {fileID: 9212735942857516297}
   - component: {fileID: 8763151967468153588}
   - component: {fileID: 1341205777390904450}
-  - component: {fileID: 5457842398181924878}
-  m_Layer: 0
+  - component: {fileID: 6489745715393105031}
+  m_Layer: 8
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,17 +239,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5457842398181924878
-MeshCollider:
+--- !u!61 &6489745715393105031
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2675368188897594666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: fbbe8e7796a209149ae27f1ed480475a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1}
+  m_EdgeRadius: 0
